@@ -49,5 +49,6 @@ A string value that represents the folder path into which the report will be ins
 
 ## Release History
 
-###### v0.0.1 : Initial commit
-###### v0.0.2 : Add Use Case Abstract annotation
+v0.0.1 : Initial commit
+
+v0.0.2 : Add Use Case Abstract annotation
