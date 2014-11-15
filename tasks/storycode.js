@@ -9,7 +9,7 @@
 'use strict';
 
 var Storycode = require('storycode/storycode'),
-    path = require('path')
+    path = require('path');
 
 module.exports = function(grunt) {
 
@@ -18,11 +18,12 @@ module.exports = function(grunt) {
 
     grunt.registerMultiTask('storycode', 'Grunt plugin for Storycode ( Use Case Tracker )', function() {
 
+        grunt.log.subhead('Storycode Go !');
 
-
+        var dest = this.options().dest || './temp';
 
         // Iterate over all specified file groups.
-        this.files.forEach(function(f) {
+        this.files.forEach(function( f ) {
 
             // Concat specified files.
             var src = f.src.filter(function(filepath) {
@@ -36,31 +37,23 @@ module.exports = function(grunt) {
                 }
             });
 
-            Storycode().process( src , "./report/output");
-            grunt.log.writeln('File output.json created.');
-            grunt.log.writeln(f.dest);
+            // Process storycode
+            Storycode().process( src , "./report");
+            grunt.log.ok('Source files have been successfully scanned (1/2)');
 
             var reportFolderNames = ['js','css','fonts' ];
             reportFolderNames.forEach( function( name ) {
-                grunt.file.expand( { filter: 'isFile'},'./tasks/report/' + name + '/*').forEach( function( reportFile ) {
-                    grunt.file.copy( reportFile , './temp/' + name + '/' + reportFile.split('/').pop() );
+                grunt.file.expand( { filter: 'isFile'},'./report/' + name + '/*').forEach( function( reportFile ) {
+                    grunt.file.copy( reportFile , dest + '/' + name + '/' + reportFile.split('/').pop() );
                 });
             });
 
-            grunt.file.expand( { filter: 'isFile'},'./tasks/report/*').forEach( function( reportFile ) {
-                grunt.file.copy( reportFile , './temp/' + reportFile.split('/').pop() );
+            grunt.file.expand( { filter: 'isFile'},'./report/*').forEach( function( reportFile ) {
+                grunt.file.copy( reportFile , dest + '/' + reportFile.split('/').pop() );
             });
 
-            var destPath = f.dest.split('/');
-            destPath.pop();
-            console.log( destPath.join('/') );
-
-
-            // Write the destination file.
-
-
-
+            grunt.log.ok('Use case Report has been successfully generated in ' + dest + ' (2/2)');
         });
-  });
+    });
 
 };
