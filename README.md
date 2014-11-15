@@ -1,6 +1,8 @@
 # grunt-storycode
 
-> Grunt plugin for Storycode ( Use Case Tracker )
+> Grunt plugin for Storycode ( Use Case Tracker for Javascript Code )
+
+For more information about Storycode, please go [here](https://github.com/kawan16/storycode)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -18,6 +20,8 @@ grunt.loadNpmTasks('grunt-storycode');
 ```
 
 ## The "storycode" task
+
+The task will extract all the `storycode` annotated comments and generate a html report the use cases and the way they are completed through your code. 
 
 ### Overview
 In your project's Gruntfile, add a section named `storycode` to the data object passed into `grunt.initConfig()`.
@@ -37,53 +41,13 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.dest
 Type: `String`
-Default value: `',  '`
+Default value: `'./temp'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  storycode: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  storycode: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+A string value that represents the folder path into which the report will be installed.
 
 ## Release History
-_(Nothing yet)_
+
+v0.0.1 : Initial commit
+v0.0.2 : Add Use Case Abstract annotation 
