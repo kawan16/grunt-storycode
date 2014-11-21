@@ -1,0 +1,117 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   '0.0.1' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\Karl\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\Karl\\AppData\\Roaming\\npm-cache\\grunt-storycode\\0.0.1\\package.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package.tgz
+13 verbose folder .
+14 info prepublish grunt-storycode@0.0.1
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. C:\Users\Karl\AppData\Roaming\npm-cache\1f1177db-tar.lock
+17 silly lockFile 5d7bfde0-runt-storycode-0-0-1-package-tgz tar://C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package.tgz
+18 verbose lock tar://C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package.tgz C:\Users\Karl\AppData\Roaming\npm-cache\5d7bfde0-runt-storycode-0-0-1-package-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 5d7bfde0-runt-storycode-0-0-1-package-tgz tar://C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package.tgz
+22 silly lockFile 5d7bfde0-runt-storycode-0-0-1-package-tgz tar://C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package.tgz
+23 silly lockFile 014019cb-he-grunt-storycode-0-0-1-package C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package
+24 verbose lock C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package C:\Users\Karl\AppData\Roaming\npm-cache\014019cb-he-grunt-storycode-0-0-1-package.lock
+25 silly lockFile 014019cb-he-grunt-storycode-0-0-1-package C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package
+26 silly lockFile 014019cb-he-grunt-storycode-0-0-1-package C:\Users\Karl\AppData\Roaming\npm-cache\grunt-storycode\0.0.1\package
+27 silly lockFile 3a52ce78- .
+28 silly lockFile 3a52ce78- .
+29 silly publish { name: 'grunt-storycode',
+29 silly publish   description: 'Grunt plugin for Storycode ( Use Case Tracker )',
+29 silly publish   version: '0.0.1',
+29 silly publish   homepage: 'https://github.com/kawan16/grunt-storycode',
+29 silly publish   author: { name: 'Kawan16', email: 'karl.devooght@gmail.com' },
+29 silly publish   repository: { type: 'git', url: 'git://github.com/kawan16/grunt-storycode' },
+29 silly publish   bugs: { url: 'https://github.com/kawan16/grunt-storycode/issues' },
+29 silly publish   licenses:
+29 silly publish    [ { type: 'MIT',
+29 silly publish        url: 'https://github.com/kawan16/grunt-storycode/blob/master/LICENSE-MIT' } ],
+29 silly publish   engines: { node: '>= 0.8.0' },
+29 silly publish   scripts: { test: 'grunt test' },
+29 silly publish   dependencies: { storycode: '0.0.1' },
+29 silly publish   devDependencies:
+29 silly publish    { 'grunt-contrib-jshint': '^0.9.2',
+29 silly publish      'grunt-contrib-clean': '^0.5.0',
+29 silly publish      'grunt-contrib-nodeunit': '^0.3.3',
+29 silly publish      grunt: '~0.4.5' },
+29 silly publish   peerDependencies: { grunt: '~0.4.5' },
+29 silly publish   keywords: [ 'gruntplugin' ],
+29 silly publish   gitHead: 'a23479dc3c1d9cfc285db7df00c450d7dd6370ba',
+29 silly publish   readme: '# grunt-storycode\r\n\r\n> Grunt plugin for Storycode ( Use Case Tracker )\r\n\r\n## Getting Started\r\nThis plugin requires Grunt `~0.4.5`\r\n\r\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\r\n\r\n```shell\r\nnpm install grunt-storycode --save-dev\r\n```\r\n\r\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\r\n\r\n```js\r\ngrunt.loadNpmTasks(\'grunt-storycode\');\r\n```\r\n\r\n## The "storycode" task\r\n\r\n### Overview\r\nIn your project\'s Gruntfile, add a section named `storycode` to the data object passed into `grunt.initConfig()`.\r\n\r\n```js\r\ngrunt.initConfig({\r\n  storycode: {\r\n    options: {\r\n      // Task-specific options go here.\r\n    },\r\n    your_target: {\r\n      // Target-specific file lists and/or options go here.\r\n    },\r\n  },\r\n});\r\n```\r\n\r\n### Options\r\n\r\n#### options.separator\r\nType: `String`\r\nDefault value: `\',  \'`\r\n\r\nA string value that is used to do something with whatever.\r\n\r\n#### options.punctuation\r\nType: `String`\r\nDefault value: `\'.\'`\r\n\r\nA string value that is used to do something else with whatever else.\r\n\r\n### Usage Examples\r\n\r\n#### Default Options\r\nIn this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`\r\n\r\n```js\r\ngrunt.initConfig({\r\n  storycode: {\r\n    options: {},\r\n    files: {\r\n      \'dest/default_options\': [\'src/testing\', \'src/123\'],\r\n    },\r\n  },\r\n});\r\n```\r\n\r\n#### Custom Options\r\nIn this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`\r\n\r\n```js\r\ngrunt.initConfig({\r\n  storycode: {\r\n    options: {\r\n      separator: \': \',\r\n      punctuation: \' !!!\',\r\n    },\r\n    files: {\r\n      \'dest/default_options\': [\'src/testing\', \'src/123\'],\r\n    },\r\n  },\r\n});\r\n```\r\n\r\n## Contributing\r\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).\r\n\r\n## Release History\r\n_(Nothing yet)_\r\n',
+29 silly publish   readmeFilename: 'README.md',
+29 silly publish   _id: 'grunt-storycode@0.0.1',
+29 silly publish   _shasum: 'b6e6c5a23043c5a41a51002d7f765a7b5532a6eb',
+29 silly publish   _from: '.' }
+30 verbose request where is /grunt-storycode
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 520155f5e08e7e06
+33 verbose url raw /grunt-storycode
+34 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-storycode' ]
+35 verbose url resolved https://registry.npmjs.org/grunt-storycode
+36 verbose request where is https://registry.npmjs.org/grunt-storycode
+37 info trying registry request attempt 1 at 23:04:46
+38 http PUT https://registry.npmjs.org/grunt-storycode
+39 http 403 https://registry.npmjs.org/grunt-storycode
+40 verbose headers { date: 'Sat, 15 Nov 2014 22:05:01 GMT',
+40 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+40 verbose headers   'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=60',
+40 verbose headers   'content-length': '6465',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   'x-served-by': 'cache-ams4139-AMS',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1416089088.097029,VS0,VE13595',
+40 verbose headers   'keep-alive': 'timeout=10, max=50',
+40 verbose headers   connection: 'Keep-Alive' }
+41 error publish Failed PUT 403
+42 error Error: forbidden cannot modify pre-existing version: 0.0.1
+42 error old={"name":"grunt-storycode","description":"Grunt plugin for Storycode ( Use Case Tracker )","version":"0.0.1","homepage":"https://github.com/kawan16/grunt-storycode","author":{"name":"Kawan16","email":"karl.devooght@gmail.com"},"repository":{"type":"git","url":"git://github.com/kawan16/grunt-storycode"},"bugs":{"url":"https://github.com/kawan16/grunt-storycode/issues"},"licenses":[{"type":"MIT","url":"https://github.com/kawan16/grunt-storycode/blob/master/LICENSE-MIT"}],"engines":{"node":">= 0.8.0"},"scripts":{"test":"grunt test"},"dependencies":{"storycode":"0.0.1"},"devDependencies":{"grunt-contrib-jshint":"^0.9.2","grunt-contrib-clean":"^0.5.0","grunt-contrib-nodeunit":"^0.3.3","grunt":"~0.4.5"},"peerDependencies":{"grunt":"~0.4.5"},"keywords":["gruntplugin"],"gitHead":"a23479dc3c1d9cfc285db7df00c450d7dd6370ba","_id":"grunt-storycode@0.0.1","_shasum":"8f963776caf4d226fb765a545cdad96bd8afdae1","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"kawan16","email":"karl.devooght@gmail.com"},"maintainers":[{"name":"kawan16","email":"karl.devooght@gmail.com"}],"dist":{"shasum":"8f963776caf4d226fb765a545cdad96bd8afdae1","tarball":"http://registry.npmjs.org/grunt-storycode/-/grunt-storycode-0.0.1.tgz"}}
+42 error new={"name":"grunt-storycode","description":"Grunt plugin for Storycode ( Use Case Tracker )","version":"0.0.1","homepage":"https://github.com/kawan16/grunt-storycode","author":{"name":"Kawan16","email":"karl.devooght@gmail.com"},"repository":{"type":"git","url":"git://github.com/kawan16/grunt-storycode"},"bugs":{"url":"https://github.com/kawan16/grunt-storycode/issues"},"licenses":[{"type":"MIT","url":"https://github.com/kawan16/grunt-storycode/blob/master/LICENSE-MIT"}],"engines":{"node":">= 0.8.0"},"scripts":{"test":"grunt test"},"dependencies":{"storycode":"0.0.1"},"devDependencies":{"grunt-contrib-jshint":"^0.9.2","grunt-contrib-clean":"^0.5.0","grunt-contrib-nodeunit":"^0.3.3","grunt":"~0.4.5"},"peerDependencies":{"grunt":"~0.4.5"},"keywords":["gruntplugin"],"gitHead":"a23479dc3c1d9cfc285db7df00c450d7dd6370ba","readme":"# grunt-storycode\u000d\u000a\u000d\u000a> Grunt plugin for Storycode ( Use Case Tracker )\u000d\u000a\u000d\u000a## Getting Started\u000d\u000aThis plugin requires Grunt `~0.4.5`\u000d\u000a\u000d\u000aIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:\u000d\u000a\u000d\u000a```shell\u000d\u000anpm install grunt-storycode --save-dev\u000d\u000a```\u000d\u000a\u000d\u000aOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\u000d\u000a\u000d\u000a```js\u000d\u000agrunt.loadNpmTasks('grunt-storycode');\u000d\u000a```\u000d\u000a\u000d\u000a## The \"storycode\" task\u000d\u000a\u000d\u000a### Overview\u000d\u000aIn your project's Gruntfile, add a section named `storycode` to the data object passed into `grunt.initConfig()`.\u000d\u000a\u000d\u000a```js\u000d\u000agrunt.initConfig({\u000d\u000a  storycode: {\u000d\u000a    options: {\u000d\u000a      // Task-specific options go here.\u000d\u000a    },\u000d\u000a    your_target: {\u000d\u000a      // Target-specific file lists and/or options go here.\u000d\u000a    },\u000d\u000a  },\u000d\u000a});\u000d\u000a```\u000d\u000a\u000d\u000a### Options\u000d\u000a\u000d\u000a#### options.separator\u000d\u000aType: `String`\u000d\u000aDefault value: `',  '`\u000d\u000a\u000d\u000aA string value that is used to do something with whatever.\u000d\u000a\u000d\u000a#### options.punctuation\u000d\u000aType: `String`\u000d\u000aDefault value: `'.'`\u000d\u000a\u000d\u000aA string value that is used to do something else with whatever else.\u000d\u000a\u000d\u000a### Usage Examples\u000d\u000a\u000d\u000a#### Default Options\u000d\u000aIn this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`\u000d\u000a\u000d\u000a```js\u000d\u000agrunt.initConfig({\u000d\u000a  storycode: {\u000d\u000a    options: {},\u000d\u000a    files: {\u000d\u000a      'dest/default_options': ['src/testing', 'src/123'],\u000d\u000a    },\u000d\u000a  },\u000d\u000a});\u000d\u000a```\u000d\u000a\u000d\u000a#### Custom Options\u000d\u000aIn this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`\u000d\u000a\u000d\u000a```js\u000d\u000agrunt.initConfig({\u000d\u000a  storycode: {\u000d\u000a    options: {\u000d\u000a      separator: ': ',\u000d\u000a      punctuation: ' !!!',\u000d\u000a    },\u000d\u000a    files: {\u000d\u000a      'dest/default_options': ['src/testing', 'src/123'],\u000d\u000a    },\u000d\u000a  },\u000d\u000a});\u000d\u000a```\u000d\u000a\u000d\u000a## Contributing\u000d\u000aIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).\u000d\u000a\u000d\u000a## Release History\u000d\u000a_(Nothing yet)_\u000d\u000a","readmeFilename":"README.md","_id":"grunt-storycode@0.0.1","_shasum":"b6e6c5a23043c5a41a51002d7f765a7b5532a6eb","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"kawan16","email":"karl.devooght@gmail.com"},"maintainers":[{"name":"kawan16","email":"karl.devooght@gmail.com"}],"dist":{"shasum":"b6e6c5a23043c5a41a51002d7f765a7b5532a6eb","tarball":"http://registry.npmjs.org/grunt-storycode/-/grunt-storycode-0.0.1.tgz"}}: grunt-storycode
+42 error     at RegClient.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:308:14)
+42 error     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:246:65)
+42 error     at Request.self.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:236:22)
+42 error     at Request.emit (events.js:98:17)
+42 error     at Request.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1142:14)
+42 error     at Request.emit (events.js:117:20)
+42 error     at IncomingMessage.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:1096:12)
+42 error     at IncomingMessage.emit (events.js:117:20)
+42 error     at _stream_readable.js:943:16
+42 error     at process._tickCallback (node.js:419:13)
+43 error If you need help, you may report this *entire* log,
+43 error including the npm and node versions, at:
+43 error     <http://github.com/npm/npm/issues>
+44 error System Windows_NT 6.2.9200
+45 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "--tag" "0.0.1"
+46 error cwd D:\My Business\Web\git-grunt-storycode
+47 error node -v v0.10.33
+48 error npm -v 1.4.28
+49 verbose exit [ 1, true ]
