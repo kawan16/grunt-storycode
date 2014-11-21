@@ -1,7 +1,7 @@
 {
     "name": "grunt-storycode",
     "description": "Grunt plugin for Storycode ( Use Case Tracker )",
-    "version": "0.0.2",
+    "version": "0.0.2.1",
     "homepage": "https://github.com/kawan16/grunt-storycode",
     "author": {
         "name": "Kawan16",
