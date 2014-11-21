@@ -1,4 +1,4 @@
-# grunt-storycode
+# Grunt Storycode
 
 > Grunt plugin for Storycode ( Use Case Tracker for Javascript Code )
 
@@ -52,3 +52,7 @@ A string value that represents the folder path into which the report will be ins
 v0.0.1 : Initial commit
 
 v0.0.2 : Add Use Case Abstract annotation
+
+v0.0.3 : Fix bug Not work with set of files in configuration
+
+v0.0.4 : Upgrade version of storycode to 0.0.2
