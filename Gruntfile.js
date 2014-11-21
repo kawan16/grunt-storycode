@@ -32,12 +32,23 @@ module.exports = function(grunt) {
     storycode: {
       default_options: {
         options: {},
-        files: [{
-            expand: true,
-            cwd: './test/fixtures',
-            src: '*.js',
-            dest: './tmp/'
-        }]
+        files: [
+            {
+                expand: true,
+                cwd: './test/fixture1',
+                src: '*.js'
+            },
+            {
+                expand: true,
+                cwd: './test/fixture2',
+                src: '*.js'
+            },
+            {
+                expand: true,
+                cwd: './test/fixture3',
+                src: '*'
+            }
+        ]
       }
     },
 

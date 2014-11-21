@@ -20,13 +20,15 @@ module.exports = function(grunt) {
 
         grunt.log.subhead('Storycode Go !');
 
-        var dest = this.options().dest || './temp';
+        var dest = this.options().dest || './temp',
+            reportPath = './node_modules/grunt-storycode/report',
+            src = [];
 
         // Iterate over all specified file groups.
         this.files.forEach(function( f ) {
 
             // Concat specified files.
-            var src = f.src.filter(function(filepath) {
+            src = src.concat( f.src.filter(function(filepath) {
                 // Warn on and remove invalid source files (if nonull was set).
                 if (!grunt.file.exists(filepath)) {
                     grunt.log.warn('Source file "' + filepath + '" not found.');
@@ -35,25 +37,27 @@ module.exports = function(grunt) {
                 else {
                     return true;
                 }
-            });
-
-            // Process storycode
-            Storycode().process( src , "./report");
-            grunt.log.ok('Source files have been successfully scanned (1/2)');
-
-            var reportFolderNames = ['js','css','fonts' ];
-            reportFolderNames.forEach( function( name ) {
-                grunt.file.expand( { filter: 'isFile'},'./report/' + name + '/*').forEach( function( reportFile ) {
-                    grunt.file.copy( reportFile , dest + '/' + name + '/' + reportFile.split('/').pop() );
-                });
-            });
-
-            grunt.file.expand( { filter: 'isFile'},'./report/*').forEach( function( reportFile ) {
-                grunt.file.copy( reportFile , dest + '/' + reportFile.split('/').pop() );
-            });
-
-            grunt.log.ok('Use case Report has been successfully generated in ' + dest + ' (2/2)');
+            }));
         });
+
+        // Process storycode
+        var useCases = Storycode().process( src , 'output' );
+        grunt.file.write( dest + '/output.json' , JSON.stringify( useCases ) );
+        grunt.log.ok('Source files have been successfully scanned (1/2)');
+
+        var reportFolderNames = ['js','css','fonts' ];
+        reportFolderNames.forEach( function( name ) {
+            grunt.file.expand( { filter: 'isFile'}, reportPath + '/' + name + '/*').forEach( function( reportFile ) {
+                grunt.file.copy( reportFile , dest + '/' + name + '/' + reportFile.split('/').pop() );
+            });
+        });
+
+        grunt.file.expand( { filter: 'isFile'}, reportPath + '/*').forEach( function( reportFile ) {
+            grunt.file.copy( reportFile , dest + '/' + reportFile.split('/').pop() );
+        });
+
+        grunt.log.ok('Use case Report has been successfully generated in ' + dest + ' (2/2)');
+
     });
 
 };

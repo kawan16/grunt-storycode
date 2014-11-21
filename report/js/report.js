@@ -60,12 +60,12 @@ function renderUsecaseMain( usecase ) {
     usecase.steps.forEach( function( step ) {
         $("#usecase-steps")
             .append(
-                "<div class='col-sm-8'>" +
+                "<div class='col-sm-10'>" +
                 "<h4>" +
                 step.number + ". " + step.description  +
                 " </h4>" +
                 "</div>" +
-                "<div class='col-sm-4'>" +
+                "<div class='col-sm-2'>" +
                 "<h4>" +
                 "<i> ( " + step.file + ":" + step.line + " ) </i>" +
                 "</h4>" +
